@@ -22,8 +22,8 @@
   </head>
   <body>
     <div class="container">
-      <form class="form-signin" method="post" action="/login">
-        <h2 class="form-signin-heading">We made sign in</h2>
+      <form class="form-signin" method="post" action="/joinProcess">
+        <h2 class="form-signin-heading">Please sign in</h2>
         <p>
           <label for="username" class="sr-only">Username</label>
           <input

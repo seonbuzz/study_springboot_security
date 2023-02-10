@@ -12,10 +12,12 @@ public class MainController {
     public ModelAndView main(ModelAndView modelAndView) {
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
+        String username = null;
         if (principal instanceof UserDetails) {
-            String username = ((UserDetails) principal).getUsername();
+            username = ((UserDetails) principal).getUsername();// 로그인 상태에서 확인 가능.
         } else {
-            String username = principal.toString();
+            username = principal.toString(); // 로그아웃이 된 상태에서 확인 가능.
+
         }
 
         String viewName = "/WEB-INF/views/main.jsp";
